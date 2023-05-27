@@ -12,7 +12,6 @@ package less_OOP_01.less_oop_task_02_Rectangle;
 который возвращает периметр прямоугольника (2 * (ширина + высота)).
  */
 
-
 public class Rectangle {
     private Double width;
     private Double height;
