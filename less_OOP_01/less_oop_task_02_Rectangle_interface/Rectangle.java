@@ -1,4 +1,4 @@
-package less_OOP_01.less_oop_task_02_Rectangle;
+package less_OOP_01.less_oop_task_02_Rectangle_interface;
 /*
  * Задача 2:
 Реализуйте класс "Прямоугольник" (Rectangle), который имеет свойства ширина (width) и высота (height). 
@@ -12,7 +12,7 @@ package less_OOP_01.less_oop_task_02_Rectangle;
 который возвращает периметр прямоугольника (2 * (ширина + высота)).
  */
 
-public class Rectangle {
+public class Rectangle implements I_Measure{
     private Double width;
     private Double height;
 
@@ -46,16 +46,42 @@ public class Rectangle {
         return this.height;
     }
 
+    @Override
     public Double calculateArea() {
         return this.width * this.height;
     }
 
+    @Override
     public Double calculatePerimeter() {
         return 2 * (this.width + this.height);
     }
 
+    @Override
+    public Double calculateDiagonal(int f) {
+        Double w = this.width;
+        Double h = this.height;
+        
+        if (f == 1){ // тогда считаем диагональ, проведенную из середин сторон 
+            w = w / 2;
+            h = h / 2;
+        }
+        return Math.sqrt(Math.pow(w,2) + Math.pow(h,2));
+    }
+
+    @Override
+    public Double calculateAriaInsideRomb() {
+        Double side = calculateDiagonal(1);
+        return side * side;
+    }
+
+    @Override
+    public Double calculatePerimetrInsideRomb() {
+        Double side = calculateDiagonal(1);
+        return 2 * (side + side);
+    }
+
+    @Override
     public void printRectangle() {
         System.out.println("width= " + this.width + ", heigth= " + this.height);
     }
-
 }
