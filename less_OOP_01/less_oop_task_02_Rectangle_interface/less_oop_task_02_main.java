@@ -15,7 +15,7 @@ package less_OOP_01.less_oop_task_02_Rectangle_interface;
 
 import java.util.ArrayList;
 
-public class less_oop_task_02_main {
+public class less_oop_task_02_main implements I_Const {
     public static void main(String[] args){
         ArrayList <Rectangle> myRectanglesList = new ArrayList<>();
         Rectangle r1 = new Rectangle();
@@ -31,6 +31,10 @@ public class less_oop_task_02_main {
         
         Rectangle r4 = new Rectangle();
         myRectanglesList.add(r4);
+        
+        Rectangle r5 = new Rectangle(MIN, MAX);
+        myRectanglesList.add(r5);
+
         
         int i = 1; // счетчик
         for (Rectangle r : myRectanglesList){

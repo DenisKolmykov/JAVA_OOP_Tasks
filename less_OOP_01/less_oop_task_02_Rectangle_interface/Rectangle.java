@@ -12,7 +12,7 @@ package less_OOP_01.less_oop_task_02_Rectangle_interface;
 который возвращает периметр прямоугольника (2 * (ширина + высота)).
  */
 
-public class Rectangle implements I_Measure{
+public class Rectangle implements I_Measure, I_Const{
     private Double width;
     private Double height;
 
@@ -26,8 +26,8 @@ public class Rectangle implements I_Measure{
     }
 
     public Rectangle (){
-        width = 10.0;
-        height = 20.0;
+        width = MIN;
+        height = 2 * MIN;
     }
 
     public void setWidth(Double w) {
