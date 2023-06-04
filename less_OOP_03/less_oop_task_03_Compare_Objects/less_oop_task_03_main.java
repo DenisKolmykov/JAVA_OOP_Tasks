@@ -64,8 +64,6 @@ public class less_oop_task_03_main {
     public static ArrayList<String> sortObjects(ArrayList<String> objects, Comparator<String> comparator) {
         ArrayList<String> sortMyObjects = new ArrayList<>(objects);
         Collections.sort(sortMyObjects, comparator);
-        // System.out.println("Сортированный список строк: ");
-        // printList (sortObjects);
         return sortMyObjects;
     }
 
@@ -91,6 +89,5 @@ public class less_oop_task_03_main {
         printList(sortObjects(myStringList, lengthComparator));
         System.out.println("-реализация сортировки через функцию-");
         printList(sortObjects2.func(myStringList, lengthComparator));
-
     }
 }
