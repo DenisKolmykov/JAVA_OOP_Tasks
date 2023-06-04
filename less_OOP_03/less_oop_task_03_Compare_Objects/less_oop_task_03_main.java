@@ -62,11 +62,11 @@ public class less_oop_task_03_main {
     }
 
     public static ArrayList<String> sortObjects(ArrayList<String> objects, Comparator<String> comparator) {
-        ArrayList<String> sortObjects = new ArrayList<>(objects);
-        Collections.sort(sortObjects, comparator);
+        ArrayList<String> sortMyObjects = new ArrayList<>(objects);
+        Collections.sort(sortMyObjects, comparator);
         // System.out.println("Сортированный список строк: ");
         // printList (sortObjects);
-        return sortObjects;
+        return sortMyObjects;
     }
 
     public static void main(String[] args) {
@@ -80,9 +80,17 @@ public class less_oop_task_03_main {
 
         Comparator<String> lengthComparator = Comparator.comparing(String::length).reversed();
 
+        I_Function sortObjects2 = (objects, comparator) -> {
+            ArrayList<String> sortMyObjects2 = new ArrayList<>(objects);
+            Collections.sort(sortMyObjects2, comparator);
+            return sortMyObjects2;
+        };
+
         System.out.println();
-        System.out.println("Сортированный список строк: ");
+        System.out.println("--реализация сортировки через метод--");
         printList(sortObjects(myStringList, lengthComparator));
+        System.out.println("-реализация сортировки через функцию-");
+        printList(sortObjects2.func(myStringList, lengthComparator));
 
     }
 }
