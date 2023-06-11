@@ -1,0 +1,8 @@
+Petr,pet,124
+Ivan,iva,125
+Vasya,vas,122
+Sveta,svet,127
+Tanya,tan,223
+Viktor,vik,235
+Lusya,lus,325
+Denis,den,555
